@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #randomText {
+            margin: 20px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Text Generator</h1>
+        <div id="randomText">Press the button to see some magic!</div>
+        <button onclick="showRandomText()">Show Random Text</button>
+    </div>
+
+    <script>
+        function showRandomText() {
+            const texts = ["Text 1", "Text 2", "Text 3", "Text 4"];
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById("randomText").innerText = texts[randomIndex];
+        }
+    </script>
+</body>
+</html>
